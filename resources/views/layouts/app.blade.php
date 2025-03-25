@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>@yield('title')</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -139,11 +139,14 @@
    </div>
 </aside>
 
-    <div class="p-4 sm:ml-64">
-        <div class="mt-10">
+    <div class="p-4 sm:ml-64 mt-10">
+        <div class="mt-4">
             @yield('content')
         </div>
     </div>
 
+
+
+    @yield('script')
    </body>
 </html>
