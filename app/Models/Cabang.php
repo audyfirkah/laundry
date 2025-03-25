@@ -14,4 +14,9 @@ class Cabang extends Model
         'nama_cabang',
         'alamat',
     ];
+
+
+    public function user(){
+        
+    }
 }
