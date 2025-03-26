@@ -5,7 +5,7 @@
 @section('content')
 <div class="container mx-auto mt-10 px-6 py-10 bg-white shadow-sm">
     <div class="flex justify-between items-center mb-6">
-        <h2 class="text-3xl font-semibold text-gray-800">Daftar Transaksii</h2>
+        <h2 class="text-3xl font-semibold text-gray-800">Daftar Transaksi</h2>
         <a href="#" class="bg-gray-900 text-white px-5 py-2 rounded-lg shadow-md hover:bg-gray-700 transition duration-300 flex items-center">
             <i class="fas fa-user-plus mr-2"></i> Tambah
         </a>

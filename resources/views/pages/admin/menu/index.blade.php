@@ -15,6 +15,7 @@
         <table class="w-full border-collapse rounded-lg">
             <thead class="bg-gray-100 border-b border-b-gray-500">
                 <tr>
+                    <th class="px-4 py-2 text-left">Paket</th>
                     <th class="px-4 py-2 text-left">Nama Barang</th>
                     <th class="px-4 py-2 text-left">Kategori</th>
                     <th class="px-4 py-2 text-left">Satuan</th>
@@ -25,6 +26,7 @@
             <tbody class="text-gray-700">
                 @foreach($data as $menu)
                     <tr class="border-b hover:bg-gray-100 transition">
+                        <td class="px-4 py-2 text-sm">{{ $menu->paket->nama }}</td>
                         <td class="px-4 py-2 text-sm">{{ $menu->nama_barang }}</td>
                         <td class="px-4 py-2 text-sm">{{ $menu->kategori }}</td>
                         <td class="px-4 py-2 text-sm">{{ $menu->satuan }}</td>

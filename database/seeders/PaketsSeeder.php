@@ -18,7 +18,7 @@ class PaketsSeeder extends Seeder
         foreach (range(1, 3) as $index) {
             $paket = new \App\Models\Paket();
             $paket->id_paket = $index;
-            $paket->nama = $faker->company;
+            $paket->nama = "Paket" . $index;
             $paket->layanan = "Kays" . $index;
             $paket->jenis_layanan = $faker->randomElement(['cuci', 'setrika', 'cuci setrika']);
             $paket->save();

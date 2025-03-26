@@ -16,9 +16,9 @@
                 @method('POST')
                 <div class="mb-4">
                     <label for="nama" class="block text-gray-700 font-semibold mb-2">Nama</label>
-                    <input type="text" name="nama" id="nama" value="{{ old('nama') }}" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-500">
+                    <input type="text" name="nama" id="nama" value="{{ old('nama') }}" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-500" >
                     @error('nama')
-                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p> 
                     @enderror
                 </div>
 

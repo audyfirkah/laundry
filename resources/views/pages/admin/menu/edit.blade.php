@@ -51,6 +51,7 @@
                         <option value="besar" {{ old('kategori', $menu->kategori) == 'besar' ? 'selected' : '' }}>Besar</option>
                         <option value="sedang" {{ old('kategori', $menu->kategori) == 'sedang' ? 'selected' : '' }}>Sedang</option>
                         <option value="kecil" {{ old('kategori', $menu->kategori) == 'kecil' ? 'selected' : '' }}>Kecil</option>
+                        <option value="dryclean" {{ old('kategori', $menu->kategori) == 'dryclean' ? 'selected' : '' }}>Dryclean</option>
                     </select>
                     @error('kategori')
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>

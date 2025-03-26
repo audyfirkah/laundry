@@ -10,7 +10,8 @@ use App\Models\Paket;
 class MenuController extends Controller
 {
     public function index() {
-        $data = Menu::orderBy('created_at', 'desc')
+        $data = Menu::with('paket')
+            ->orderBy('created_at', 'desc')
             ->paginate(10);
 
         return view('pages.admin.menu.index', compact('data'));
