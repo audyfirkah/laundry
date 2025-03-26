@@ -17,7 +17,7 @@
          <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     </head>
-   <body>
+   <body class="bg-gray-100">
     
 
 
@@ -96,7 +96,7 @@
    </div>
 </aside>
 
-    <div class="flex justify-center items-center sm:ml-64 p-4 bg-gray-100">
+    <div class="flex justify-center items-center sm:ml-64 p-4 ">
       <div class="w-full mt-8 p-6">
          @yield('content')
       </div>

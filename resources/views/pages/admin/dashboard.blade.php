@@ -3,8 +3,9 @@
 @section('title', 'Dashboard')
 
 @section('content')
+<div class="bg-white w-full h-96 p-10">
     <h1 class="text-3xl font-bold">Dashboard </h1>
-    <div class="flex gap-4">
+    <div class="flex gap-4 mt-4">
         <div class="bg-blue-500 p-4 rounded-sm cursor-pointer w-xs">
             <div class="flex justify-between text-white">
                 <div>
@@ -24,5 +25,7 @@
             Transaksi:
         </div>
     </div>
+</div>
+
 
 @endsection
