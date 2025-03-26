@@ -24,8 +24,8 @@ class DatabaseSeeder extends Seeder
             CabangsSeeder::class,
             PaketsSeeder::class,
             MenusSeeder::class,
-            // TransaksisSeeder::class,
-            // DetailTransaksisSeeder::class,
+            TransaksisSeeder::class,
+            DetailTransaksisSeeder::class,
         ]);
     }
 }

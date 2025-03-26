@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('id_transaksi');
             $table->unsignedBigInteger('id_user');
             $table->unsignedBigInteger('id_cabang');
-            $table->decimal('total', 10, 2);
+            $table->decimal('total', 10, 2)->nullable();
             $table->string('status');
             $table->dateTime('tanggal_order');
             $table->dateTime('tanggal_selesai')->nullable();

@@ -19,9 +19,8 @@ class DetailTransaksisSeeder extends Seeder
 
         foreach (range(1, 10) as $index) {
             $detail_transaksi = new \App\Models\DetailTransaksi();
-            $detail_transaksi->id_transaksi = $index;
-            $detail_transaksi->id_paket = $faker->numberBetween(1, 3);
-            $detail_transaksi->id_menu = null;
+            $detail_transaksi->id_transaksi = $faker->numberBetween(1, 10);
+            $detail_transaksi->id_menu = $faker->numberBetween(1, 10);
             $detail_transaksi->kuantitas = $faker->numberBetween(1, 3);
             $detail_transaksi->subtotal = $faker->randomFloat(2, 1, 100);
             $detail_transaksi->save();

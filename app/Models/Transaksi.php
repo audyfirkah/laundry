@@ -17,4 +17,21 @@ class Transaksi extends Model
         'tanggal_order',
         'tanggal_selesai',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'id_user');
+    }
+
+    public function cabang()
+    {
+        return $this->belongsTo(Cabang::class, 'id_cabang');
+    }
+
+    public function detailTransaksi() 
+    {
+        return $this->hasMany(DetailTransaksi::class, 'id_transaksi');
+    }
+
+
 }

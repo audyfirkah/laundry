@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\CabangController;
-use App\Http\Controllers\MenuController;
-use App\Http\Controllers\PaketController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\Admin\CabangController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Admin\MenuController;
+use App\Http\Controllers\Admin\PaketController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -12,6 +14,10 @@ Route::get('/', function () {
     return view('landing-page');
 });
 
+Route::get('/admin', [DashboardController::class, 'admin'])->name('admin.dashboard');
+Route::get('/customer', [DashboardController::class, 'customer'])->name('customer.dashboard');
+Route::get('/direktur', [DashboardController::class, 'direktur'])->name('direktur.dashboard');
+Route::get('/pelaksana', [DashboardController::class, 'pelaksana'])->name('pelaksana.dashboard');
 
 Route::get('/admin/user', [UserController::class, 'index'])->name('admin.user.index');
 Route::get('admin/user/create', [UserController::class, 'create'])->name('admin.user.create');
@@ -40,3 +46,6 @@ Route::post('/admin/paket', [PaketController::class, 'store'])->name('admin.pake
 Route::get('/admin/paket/{id}/edit', [PaketController::class, 'edit'])->name('admin.paket.edit');
 Route::put('/admin/paket/{id}', [PaketController::class, 'update'])->name('admin.paket.update');
 Route::delete('/admin/paket/{id}', [PaketController::class, 'destroy'])->name('admin.paket.destroy');
+
+Route::get('/admin/transaksi', [TransaksiController::class, 'index'])->name('admin.transaksi.index');
+Route::get('/admin/transaksi/detail/{id}', [TransaksiController::class, 'detail'])->name('admin.transaksi.detail');

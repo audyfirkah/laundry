@@ -16,4 +16,14 @@ class Menu extends Model
         'kategori',
         'harga',
     ];
+
+    public function paket()
+    {
+        return $this->belongsTo(Paket::class, 'id_paket');
+    }
+
+    public function detailTransaksi()
+    {
+        return $this->hasMany(DetailTransaksi::class, 'id_menu');
+    }
 }

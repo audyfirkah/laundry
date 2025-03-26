@@ -10,9 +10,18 @@ class Paket extends Model
     protected $primaryKey = 'id_paket';
 
     protected $fillable = [
-        'id_paket',
         'nama',
         'layanan',
         'jenis_layanan',
     ];
+
+    public function menu()
+    {
+        return $this->hasMany(Menu::class, 'id_paket');
+    }
+
+    public function detailTransaksi()
+    {
+        return $this->hasMany(DetailTransaksi::class, 'id_paket');
+    }
 }
