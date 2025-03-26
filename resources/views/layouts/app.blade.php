@@ -13,6 +13,9 @@
         <!-- Styles / Scripts -->
             @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     </head>
    <body>
     
@@ -139,14 +142,39 @@
    </div>
 </aside>
 
-    <div class="p-4 sm:ml-64 mt-10">
-        <div class="mt-4">
-            @yield('content')
-        </div>
-    </div>
+    <div class="flex justify-center items-center sm:ml-64 p-4">
+      <div class="w-full p-6">
+         @yield('content')
+      </div>
+   </div>
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://kit.fontawesome.com/6942f8f905.js" crossorigin="anonymous"></script>
     @yield('script')
+    @if(session('success'))
+    <script>
+        Swal.fire({
+            title: "Berhasil!",
+            text: "{{ session('success') }}",
+            icon: "success",
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "OK"
+        });
+    </script>
+@endif
+
+@if(session('error'))
+    <script>
+        Swal.fire({
+            title: "Error!",
+            text: "{{ session('error') }}",
+            icon: "error",
+            confirmButtonColor: "#d33",
+            confirmButtonText: "OK"
+        });
+    </script>
+@endif
+
    </body>
 </html>
